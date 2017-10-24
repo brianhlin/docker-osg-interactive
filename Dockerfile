@@ -4,7 +4,8 @@ ARG OSG
 
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && \
     yum install -y yum-priorities && \
-    rpm -Uvh http://repo.grid.iu.edu/osg/$OSG/osg-$OSG-el6-release-latest.rpm
+    rpm -Uvh http://repo.grid.iu.edu/osg/$OSG/osg-$OSG-el6-release-latest.rpm && \
+    yum makecache
 
 WORKDIR /tmp
 
